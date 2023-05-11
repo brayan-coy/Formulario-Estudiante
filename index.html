@@ -11,51 +11,61 @@
     <div class="container">
       <form id="formulario">
         <h1>Formulario de estudiantes Responsivo</h1>
-<table>
-        <div class="input-group">
-          <label for="nombre">Nombre del estudiante:</label>
-          <input type="text" id="nombre" placeholder="Ingrese su Nombre" />
-        </div>
-
-        <div class="input-group">
-          <label for="fechaNacimiento">Fecha de nacimiento:</label>
-          <input
-            type="date"
-            id="fechaNacimiento"
-            placeholder="Ingrese su fecha"
-          />
-        </div>
-
-        <div class="input-group">
-          <label for="sexo">Género:</label>
-          <div class="radio-group">
-            <input type="radio" name="sexo" id="masculino" value="Masculino" />
-            <label for="masculino">Masculino</label>
-            <input type="radio" name="sexo" id="femenino" value="Femenino" />
-            <label for="femenino">Femenino</label>
-            <input type="radio" name="sexo" id="otro" value="Otro" />
-            <label for="otro">Otro</label>
+        <table id="estudiantes">
+          <div class="input-group">
+            <label for="nombre">Nombre del estudiante:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su Nombre" />
           </div>
-        </div>
 
-        <div class="input-group">
-          <label for="celular">Celular:</label>
-          <input
-            type="text"
-            id="celular"
-            placeholder="Ingrese su numero de celular"
-          />
-        </div>
+          <div class="input-group">
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input
+              type="date"
+              id="fechaNacimiento"
+              placeholder="Ingrese su fecha"
+            />
+          </div>
 
-        <div class="button-group">
-          <input type="button" value="Agregar" onclick="capturarDatos()" />
-          <input
-            type="button"
-            value="Exportar a Excel"
-            onclick="exportarExcel()"
-          />
-          <input type="button" value="Exportar a PDF" onclick="exportarPDF()" />
-        </div>
+          <div class="input-group">
+            <label for="sexo">Género:</label>
+            <div class="radio-group">
+              <input
+                type="radio"
+                name="sexo"
+                id="masculino"
+                value="Masculino"
+              />
+              <label for="masculino">Masculino</label>
+              <input type="radio" name="sexo" id="femenino" value="Femenino" />
+              <label for="femenino">Femenino</label>
+              <input type="radio" name="sexo" id="otro" value="Otro" />
+              <label for="otro">Otro</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="celular">Celular:</label>
+            <input
+              type="text"
+              id="celular"
+              placeholder="Ingrese su numero de celular"
+            />
+          </div>
+
+          <div class="button-group">
+            <input type="button" value="Agregar" onclick="capturarDatos()" />
+            <input
+              type="button"
+              value="Exportar a Excel"
+              onclick="exportarExcel()"
+            />
+            <input
+              type="button"
+              value="Exportar a PDF"
+              onclick="exportarPDF()"
+            />
+          </div>
+        </table>
       </form>
 
       <table>
