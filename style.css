@@ -1,102 +1,111 @@
-/* Estilos para el formulario */
-
-#formulario {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: blue;
-  border: 0;
-}
-
+/* Estilos comunes para todas las pantallas */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 h1 {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #333;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 form {
-  background-color: #fff;
+  margin: auto;
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 30px;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 label {
   display: block;
   margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
 }
 
 input[type="text"],
 input[type="date"] {
-  width: 100%;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  width: 100%;
 }
 
 input[type="radio"] {
   margin-right: 10px;
-  transform: translateY(5px);
-}
-
-input[type="radio"] + label {
-  margin-right: 20px;
-  font-size: 16px;
-}
-
-input[type="button"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-input[type="button"]:hover {
-  background-color: #555;
 }
 
 table {
+  margin: auto;
+  width: 80%;
   border-collapse: collapse;
-  width: 100%;
-  max-width: 800px;
-  margin: 30px auto;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
 }
 
 th,
 td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
 }
 
-th {
-  background-color: #333;
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+
+  table {
+    width: 90%;
+  }
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+body {
+  background-color: #ccc;
+}
+
+@media (max-width: 576px) {
+  form {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-column);
+    font-weight: bold;
+  }
 }
